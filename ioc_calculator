@@ -1,0 +1,38 @@
+#!/bin/python
+
+alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] #english alphabet
+text = "THEMOSTBEAUTIFULTHINGSINTHEWORLDCANNOTBESEENORTOUCHEDTHEYAREFELTWITHTHEHEART"
+N = len(text) # length of the text
+letterfrequency = [] #array for letter frequencies
+
+i = 0
+#Loop through alphabet and fill the frequency array (slot location indicates total letter occurences according to position (a=0,b=1))
+for i in range(len(alphabet)):
+		count = 0
+		for letter in text:
+			if letter == alphabet[i]:
+				count += 1
+		letterfrequency.append(count)
+
+# Loop through letterfrequency array, applying the second part of the formula
+IOC2 = 0
+for i in range(len(letterfrequency)):
+		Fi = letterfrequency[i]
+		IOC2 += Fi * (Fi - 1)
+
+#finish the calculation by dividing with N*(N-1)
+IOC = float(IOC2) / (N * (N - 1))
+
+print(round(IOC, 5)) #0.07438596491228071
+
+
+
+
+
+
+
+
+
+
+
+
