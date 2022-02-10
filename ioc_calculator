@@ -23,7 +23,7 @@ for i in range(len(letterfrequency)):
 #finish the calculation by dividing with N*(N-1)
 IOC = float(IOC2) / (N * (N - 1))
 
-print(round(IOC, 5)) #0.07438596491228071
+print(round(IOC, 5))
 
 
 
