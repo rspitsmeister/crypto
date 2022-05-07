@@ -7,7 +7,8 @@ def modulo_remainder(x, y, z):
     remainder = x - (integer * z) 
     return remainder
 
-print(modulo_remainder(3, 95, 673))
-print(modulo_remainder(3, 240, 673))
-print(modulo_remainder(529, 95, 673))
-print(modulo_remainder(525, 240, 673))
+print("Modulo calculation format is: x^y mod z")
+x = int(input("Enter x:"))
+y = int(input("Enter y:"))
+z = int(input("Enter z:"))
+print(modulo_remainder(x, y, z))
